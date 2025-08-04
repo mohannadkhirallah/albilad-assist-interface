@@ -1,7 +1,7 @@
-import BankingChatInterface from '@/components/BankingChatInterface';
+import ChatBoxFacelift from '@/components/ChatBoxFacelift';
 
 const Index = () => {
-  return <BankingChatInterface />;
+  return <ChatBoxFacelift />;
 };
 
 export default Index;

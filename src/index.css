@@ -2,37 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Bank Al Bilad Design System - All colors in HSL format */
+/* Bank Al Bilad Refined Design System - Professional Banking Aesthetics */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* Al Bilad Brand Colors */
-    --albilad-primary: 338 85% 23%;      /* #750B42 - Al Bilad Maroon */
-    --albilad-primary-foreground: 0 0% 100%;
-    --albilad-secondary: 40 44% 94%;     /* #F5F0E6 - Light Sand */
-    --albilad-accent: 336 68% 35%;       /* #A3195E - Interactive */
-    --albilad-success: 145 100% 23%;     /* #007A33 - Success Green */
-    --albilad-dark: 0 0% 18%;            /* #2D2D2D - Dark Text */
+    /* Al Bilad Refined Brand Colors */
+    --albilad-primary: 338 85% 20%;      /* Deeper #6B0A3A - Professional Maroon */
+    --albilad-primary-hover: 338 85% 17%;  /* Darker on hover */
+    --albilad-accent: 145 100% 20%;      /* Refined #006B2D - Success Green */
+    --albilad-accent-hover: 145 100% 17%;
     
-    /* Banking UI Palette */
-    --banking-card: 0 0% 100%;
-    --banking-card-shadow: 220 13% 91%;
-    --banking-border: 214 32% 91%;
-    --banking-muted: 210 40% 96%;
-    --banking-error: 0 84% 60%;
-    --banking-warning: 43 96% 56%;
+    /* Sophisticated Neutrals */
+    --albilad-bg: 35 20% 97%;           /* #F7F5F2 - Warm neutral background */
+    --albilad-card: 35 15% 93%;         /* #ECEAE6 - Subtle card background */
+    --albilad-surface: 0 0% 100%;       /* Pure white for elevated surfaces */
+    --albilad-border: 35 10% 85%;       /* #D5D2CE - Soft borders */
+    --albilad-muted: 35 8% 75%;         /* #B8B5B1 - Muted text */
+    --albilad-dark: 0 0% 15%;           /* #262626 - Rich dark text */
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--albilad-primary)), hsl(var(--albilad-accent)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--banking-card)), hsl(var(--albilad-secondary)));
+    /* Interactive States */
+    --albilad-focus: 338 85% 20%;       /* Focus ring color */
+    --albilad-hover-bg: 35 25% 95%;     /* Hover background */
+    --albilad-active: 338 85% 15%;      /* Active state */
     
-    /* Shadows */
-    --shadow-banking: 0 4px 12px -2px hsl(var(--albilad-primary) / 0.1);
-    --shadow-card: 0 2px 8px -1px hsl(var(--banking-card-shadow) / 0.3);
-    --shadow-floating: 0 8px 25px -5px hsl(var(--albilad-primary) / 0.15);
+    /* Neumorphic Shadows */
+    --shadow-neumorph-light: 4px 4px 8px hsl(35 20% 85%), -2px -2px 6px hsl(0 0% 100%);
+    --shadow-neumorph-inset: inset 2px 2px 4px hsl(35 20% 85%), inset -2px -2px 4px hsl(0 0% 100%);
+    --shadow-elevated: 0 8px 32px -4px hsl(338 85% 20% / 0.12);
+    --shadow-floating: 0 16px 40px -8px hsl(338 85% 20% / 0.15);
     
     /* Animation Timing */
-    --transition-banking: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elastic: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Typography Scale */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
     
     /* Standard Shadcn Colors */
     --background: 0 0% 100%;

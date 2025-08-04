@@ -18,21 +18,32 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'system-ui', 'sans-serif'],
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
-				/* Al Bilad Banking Brand Colors */
+				/* Al Bilad Refined Banking Colors */
 				'albilad-primary': 'hsl(var(--albilad-primary))',
-				'albilad-primary-foreground': 'hsl(var(--albilad-primary-foreground))',
-				'albilad-secondary': 'hsl(var(--albilad-secondary))',
+				'albilad-primary-hover': 'hsl(var(--albilad-primary-hover))',
 				'albilad-accent': 'hsl(var(--albilad-accent))',
-				'albilad-success': 'hsl(var(--albilad-success))',
+				'albilad-accent-hover': 'hsl(var(--albilad-accent-hover))',
+				'albilad-bg': 'hsl(var(--albilad-bg))',
+				'albilad-card': 'hsl(var(--albilad-card))',
+				'albilad-surface': 'hsl(var(--albilad-surface))',
+				'albilad-border': 'hsl(var(--albilad-border))',
+				'albilad-muted': 'hsl(var(--albilad-muted))',
 				'albilad-dark': 'hsl(var(--albilad-dark))',
+				'albilad-focus': 'hsl(var(--albilad-focus))',
+				'albilad-hover-bg': 'hsl(var(--albilad-hover-bg))',
+				'albilad-active': 'hsl(var(--albilad-active))',
 				
-				/* Banking UI Colors */
-				'banking-card': 'hsl(var(--banking-card))',
-				'banking-border': 'hsl(var(--banking-border))',
-				'banking-muted': 'hsl(var(--banking-muted))',
-				'banking-error': 'hsl(var(--banking-error))',
-				'banking-warning': 'hsl(var(--banking-warning))',
+				/* Legacy Support */
+				'banking-card': 'hsl(var(--albilad-surface))',
+				'banking-border': 'hsl(var(--albilad-border))',
+				'banking-muted': 'hsl(var(--albilad-card))',
+				'banking-error': 'hsl(var(--destructive))',
+				'banking-warning': 'hsl(43 96% 56%)',
 				
 				/* Standard Colors */
 				border: 'hsl(var(--border))',
@@ -109,6 +120,19 @@ export default {
 				'fade-in': {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' }
+				},
+				'elastic-bounce': {
+					'0%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.1)' },
+					'100%': { transform: 'scale(1)' }
+				},
+				'underline-expand': {
+					'0%': { transform: 'scaleX(0)' },
+					'100%': { transform: 'scaleX(1)' }
+				},
+				'float-up': {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
 				}
 			},
 			animation: {
@@ -117,16 +141,25 @@ export default {
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 				'typing': 'typing 1.4s ease-in-out infinite',
 				'slide-up': 'slide-up 0.3s ease-out',
-				'fade-in': 'fade-in 0.3s ease-out'
+				'fade-in': 'fade-in 0.3s ease-out',
+				'elastic-bounce': 'elastic-bounce 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+				'underline-expand': 'underline-expand 0.3s ease-out',
+				'float-up': 'float-up 0.4s ease-out'
 			},
 			boxShadow: {
+				'neumorph-light': 'var(--shadow-neumorph-light)',
+				'neumorph-inset': 'var(--shadow-neumorph-inset)',
+				'elevated': 'var(--shadow-elevated)',
+				'floating': 'var(--shadow-floating)',
 				'banking': 'var(--shadow-banking)',
-				'card': 'var(--shadow-card)',
-				'floating': 'var(--shadow-floating)'
+				'card': 'var(--shadow-card)'
 			},
-			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-card': 'var(--gradient-card)'
+			backdropBlur: {
+				'xs': '2px',
+			},
+			letterSpacing: {
+				'wide': '0.025em',
+				'wider': '0.05em',
 			}
 		}
 	},
