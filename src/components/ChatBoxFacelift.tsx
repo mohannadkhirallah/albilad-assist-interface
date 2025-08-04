@@ -582,8 +582,9 @@ export default function ChatBoxFacelift() {
                     {language === 'ar' ? 'اكتب رسالتك هنا...' : 'Type your message here...'}
                   </label>
                   
-                  {/* Enhanced Input Controls */}
-                  <div className="absolute right-3 rtl:right-auto rtl:left-3 top-1/2 transform -translate-y-1/2 flex space-x-2 rtl:space-x-reverse">
+                  {/* Enhanced Input Controls - Side by side layout */}
+                  <div className="absolute right-3 rtl:right-auto rtl:left-3 top-1/2 transform -translate-y-1/2 flex items-center space-x-1 rtl:space-x-reverse">
+                    {/* Emoji Picker */}
                     <Button
                       variant="ghost"
                       size="sm"
@@ -593,6 +594,7 @@ export default function ChatBoxFacelift() {
                       <Smile className="h-4 w-4" />
                     </Button>
                     
+                    {/* File Attachment */}
                     <Button
                       variant="ghost"
                       size="sm"
@@ -602,6 +604,7 @@ export default function ChatBoxFacelift() {
                       <Paperclip className="h-4 w-4" />
                     </Button>
                     
+                    {/* Voice Message */}
                     <Button
                       variant="ghost"
                       size="sm"
@@ -617,15 +620,17 @@ export default function ChatBoxFacelift() {
                   </div>
                 </div>
 
-                {/* Enhanced Send Button */}
-                <Button
-                  onClick={handleSendMessage}
-                  disabled={!inputText.trim() || isOffline}
-                  className="absolute right-3 rtl:right-auto rtl:left-3 top-1/2 transform -translate-y-1/2 bg-albilad-primary hover:bg-albilad-primary-hover text-white h-10 px-6 rounded-2xl shadow-neumorph-light hover:shadow-elevated transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:hover:scale-100 group"
-                >
-                  <Send className="h-4 w-4 mr-2 rtl:mr-0 rtl:ml-2 transition-transform duration-200 group-hover:scale-110 group-active:animate-elastic-bounce" />
-                  <span className="font-semibold">{language === 'ar' ? 'إرسال' : 'Send'}</span>
-                </Button>
+                {/* Enhanced Send Button - Positioned separately */}
+                <div className="absolute right-2 rtl:right-auto rtl:left-2 top-1/2 transform -translate-y-1/2">
+                  <Button
+                    onClick={handleSendMessage}
+                    disabled={!inputText.trim() || isOffline}
+                    className="bg-albilad-primary hover:bg-albilad-primary-hover text-white h-10 px-4 rounded-2xl shadow-neumorph-light hover:shadow-elevated transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:hover:scale-100 group"
+                  >
+                    <Send className="h-4 w-4 mr-2 rtl:mr-0 rtl:ml-2 transition-transform duration-200 group-hover:scale-110 group-active:animate-elastic-bounce" />
+                    <span className="font-semibold text-sm">{language === 'ar' ? 'إرسال' : 'Send'}</span>
+                  </Button>
+                </div>
               </div>
             </div>
           </CardContent>
