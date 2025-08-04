@@ -2,14 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Bank Al Bilad Design System - All colors in HSL format */
 
 @layer base {
   :root {
+    /* Al Bilad Brand Colors */
+    --albilad-primary: 338 85% 23%;      /* #750B42 - Al Bilad Maroon */
+    --albilad-primary-foreground: 0 0% 100%;
+    --albilad-secondary: 40 44% 94%;     /* #F5F0E6 - Light Sand */
+    --albilad-accent: 336 68% 35%;       /* #A3195E - Interactive */
+    --albilad-success: 145 100% 23%;     /* #007A33 - Success Green */
+    --albilad-dark: 0 0% 18%;            /* #2D2D2D - Dark Text */
+    
+    /* Banking UI Palette */
+    --banking-card: 0 0% 100%;
+    --banking-card-shadow: 220 13% 91%;
+    --banking-border: 214 32% 91%;
+    --banking-muted: 210 40% 96%;
+    --banking-error: 0 84% 60%;
+    --banking-warning: 43 96% 56%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--albilad-primary)), hsl(var(--albilad-accent)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--banking-card)), hsl(var(--albilad-secondary)));
+    
+    /* Shadows */
+    --shadow-banking: 0 4px 12px -2px hsl(var(--albilad-primary) / 0.1);
+    --shadow-card: 0 2px 8px -1px hsl(var(--banking-card-shadow) / 0.3);
+    --shadow-floating: 0 8px 25px -5px hsl(var(--albilad-primary) / 0.15);
+    
+    /* Animation Timing */
+    --transition-banking: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Standard Shadcn Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 18%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
